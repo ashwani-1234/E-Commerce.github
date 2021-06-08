@@ -31,8 +31,8 @@ public class Home extends HttpServlet {
                     + "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/home.css\">");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Home at " + request.getContextPath() + "</h1>"
-                    + "<header >\n" +
+            out.println(
+                    "<header >\n" +
 "        <!--Logo for website -->\n" +
 "        <div class=\"logo\">\n" +
 "            <img src=\"images/logo a.jpg\" alt=\"\">\n" +
@@ -43,7 +43,7 @@ public class Home extends HttpServlet {
 "            \n" +
 "            <div class=\"topnav-right\">\n" +
 "                <a href=\"#news\">Cart</a>\n" +
-"                <a class=\"active\" href=\"#contact\">Log in</a>\n" +
+"                <a class=\"active\" href=\"login.html\">Log in/Sign Up</a>\n" +
 "            </div>\n" +
 "          </div>\n" +
 "        \n" +
@@ -76,17 +76,36 @@ public class Home extends HttpServlet {
 "    </header>\n" +
 "\n" +
 "    <div class=\"second-menu-bar\">\n" +
-"        <a class=\"active\" href=\"#home\">All Categories</a>\n" +
+"        <div class=\"dropdown\">\n" +
+"           \n" +
+"            <button class=\"dropbtn\">All Categories \n" +
+"              <i class=\"fa fa-caret-down\"></i>\n" +
+"            </button>\n" +
+"            <div class=\"dropdown-content\">\n" +
+"                \n" +
+"              <a href=\"#\">Fashion</a>\n" +
+"              <a href=\"#\">Electronics</a>\n" +
+"              <a href=\"#\">Mobiels</a>\n" +
+"              <a href=\"#\">Grocery</a>\n" +
+"              <a href=\"#\">Toys</a>\n" +
+"              <a href=\"#\">Beauty</a>\n" +
+"              <a href=\"#\">Washing Machines</a>\n" +
+"              <a href=\"#\">Laptop</a>\n" +
+"              <a href=\"#\">Desktop</a>\n" +
+"             \n" +
+"           \n" +
+"            </div>\n" +
+"          </div> " +
 "        <a href=\"#news\">Fashion</a>\n" +
 "        <a href=\"#contact\">Electronics</a>\n" +
 "        <a href=\"#news\">Home Appliances</a>\n" +
 "        <a href=\"#contact\">Mobiels</a>\n" +
 "    </div>\n" +
 "\n"
-                    + " <!--poster slider-->\n" +
+                 + " \n" + //<!--poster slider-->  
 "   \n" +
 "    \n" +
-"    <section style=\"align-items: center; justify-content: center;\" >\n" +
+"    <center>\n" +
 "       <div class=\"slider\">\n" +
 "           <div class=\"slides\">\n" +
 "               <input type=\"radio\" name=\"radio-btn\" id=\"radio1\">\n" +
@@ -120,10 +139,62 @@ public class Home extends HttpServlet {
 "           </div>\n" +
 "       </div> \n" +
 "      \n" +
-"    </section>" +
+"    </center>" +
 "\n" +
+"<!--products -->\n" +
+ 
 "\n" +
-"   \n" +
+"<section class=\"products\" id=\"product\">\n" +
+"    <h3 class=\"section-title section-title-product\">Electronics</h3>\n" +
+"    \n" +
+"     <!--Products item 01-->\n" +
+"    <div class=\"electronic\">\n" +
+"        <a href=\"#\" class=\"electronic-item\">\n" +
+"            <img src=\"images/4k-resolution-led-backlit-lcd-ultra-high-definition-television-samsung-smart-tv-smart-tv-2c489af2bcea44e2f8893ce721b40938.png\" alt=\"\" class=\"product-img\">\n" +
+"        </a>\n" +
+"        <p class=\"details\">4k-resolution-led-backlit-lcd-ultra-high-definition-television-samsung-smart-tv-smart-tv\n" +
+"            <br> Rs.20000.00\n" +
+"            <br>\n" +
+"            <br>\n" +
+"            <button class=\"buy\">Buy Now</button>  <br><br>  <button class=\"buy\">Addcart</button>\n" +
+"        </p>\n" +
+"        \n" +
+"        \n" +
+"\n" +
+"        <a href=\"#\" class=\"electronic-item\">\n" +
+"            <img src=\"images/4k-resolution-ultra-high-definition-television-samsung-smart-tv-tv-backdrop-eb0c559285ee56ae335618d0d76cbadc.png\" alt=\"\" class=\"product-img\">\n" +
+"        </a>\n" +
+"        \n" +
+"        <p class=\"details\">4k-resolution-led-backlit-lcd-ultra-high-definition-television-samsung-smart-tv-smart-tv\n" +
+"            <br> Rs.20000.00\n" +
+"            <br>\n" +
+"            <br>\n" +
+"            <button class=\"buy\">Buy Now</button>  <br><br>  <button class=\"buy\">Addcart</button>\n" +
+"        </p>\n" +
+"        <a href=\"#\" class=\"electronic-item\">\n" +
+"            <img src=\"images/lg-uh605v-4k-resolution-led-backlit-lcd-smart-tv-lg-tv-a04d4fab74a1ba36f4835b25541457aa.png\" alt=\"\" class=\"product-img\">\n" +
+"        </a>\n" +
+"\n" +
+"        <p class=\"details\">4k Resolution LED <br> backlit-lcd-ultra-high-definition-television-samsung-smart-tv-smart-tv\n" +
+"            <br> Rs.20000.00\n" +
+"            <br>\n" +
+"            <br>\n" +
+"            <button class=\"buy\">Buy Now</button>   <br><br> <button class=\"buy\">Addcart</button>\n" +
+"        </p>\n" +
+"        <a href=\"#\" class=\"electronic-item\">\n" +
+"            <img src=\"images/smart-tv-led-backlit-lcd-high-definition-television-lg-electronics-4k-resolution-lg-f09cc86f27deef2a5f22cce675638d49.png\" alt=\"\" class=\"product-img\">\n" +
+"        </a>\n" +
+"        <p class=\"details\">4k-resolution-led-backlit-lcd-ultra-high-definition-television-samsung-smart-tv-smart-tv\n" +
+"            <br> Rs.20000.00\n" +
+"            <br>\n" +
+"            <br>\n" +
+"            <button class=\"buy\">Buy Now</button> <br><br>   <button class=\"buy\">Addcart</button>\n" +
+"        </p>\n" +
+"    </div>\n" +
+"    <br>\n" +
+"    <a href=\"#viewmore\" class=\"btn\">View more</a>\n" +
+"</section>"
+                            + "  \n" +
 "<script >\n"
                     + "const navToggle= document.querySelector('.nav-toggle');\n" +
 "const navLinks = document.querySelectorAll('.nav-link')\n" +
@@ -137,7 +208,16 @@ public class Home extends HttpServlet {
 "    })\n" +
 "    \n" +
 "})" +
-"\n" +
+"\n"
+ + //automatic navigation\n
+"var counter = 1;\n" +
+"setInterval(function(){\n" +
+"    document.getElementById('radio'+ counter).checked=true;\n" +
+"    counter++;\n" +
+"    if(counter >4){\n" +
+"        counter=1;\n" +
+"    }\n" +
+"},4000);" +
 "\n" +
 "</script>");
             out.println("</body>");

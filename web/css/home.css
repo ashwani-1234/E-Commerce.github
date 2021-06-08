@@ -125,6 +125,7 @@ h3{font-size: var(--fs-h3);}
 .second-menu-bar{
     overflow: hidden;
      background-color: var(--clr-accent);
+     box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
      
 }
 .second-menu-bar a{
@@ -150,6 +151,61 @@ h3{font-size: var(--fs-h3);}
 
 /*nav{display: none;}*/
 
+/*dropdown menu*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+ .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-accent);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1;
+    width: 900px;
+    
+    
+  }
+  
+  .dropdown-content a {
+   /* float: left;*/
+    color: var(--clr-light);
+    padding: 8px 20px;
+    text-decoration: none;
+    display: block;
+   text-align: right;
+   margin: 32.5px;
+   
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--clr-accent);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 /*header*/
 
 
@@ -204,7 +260,7 @@ header{
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -256,7 +312,7 @@ header{
 /*slider*/
 
 .slider{
-    width: 800px;
+    width: 1365px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
@@ -276,12 +332,12 @@ header{
     transition: 2s;
 }
 .slide img{
-    width: 800px;
+    width: 1365px;
     height: 500px;
 }
 .navigation-manual{
     position: absolute;
-    width: 800px;
+    width: 1365px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -316,4 +372,113 @@ header{
     margin-left: -60%;
 }
 
+/*css for automatic navigation*/
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1365px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.navigation-auto div{
+    border: 2px solid var(--clr-accent);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background: var(--clr-accent);
+}
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background: var(--clr-accent);
+}
 
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background: var(--clr-accent);
+}
+
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background: var(--clr-accent);
+}
+
+/*products */
+
+.products{
+    background-color:  var(--clr-accent);
+    color: var(--clr-light);
+    
+}
+
+
+
+.electronic{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+
+.electronic-item{
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+.product-img{
+    transition:transform 750ms cubic-bezier(.5,0,.5,1),opacity 200ms linear;
+}
+
+.electronic-item:focus{
+    position: relative;
+    z-index: 2;
+}
+.product-img:hover,
+.electronic-item:focus .product-img
+{
+    transform: scale(1.2);
+    opacity: .75;
+}
+
+.details{
+    color: rgb(0, 0, 0);
+}
+
+/*view more button*/
+
+.btn{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: #686868;
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    margin-left: 1050px;
+
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+ 
+/*products button*/
+
+.buy{
+    display: inline-block;
+    padding: .5em 2.3em;
+    color: var(--clr-accent);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
+    border: 0px;
+    border-radius: 4px;
+}
+.buy:hover{
+    transform: scale(1.1); 
+}
